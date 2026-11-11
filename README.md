@@ -10,7 +10,7 @@
 ![Code](https://img.shields.io/badge/code-JavaScript%20%2B%20Python-f7df1e?style=flat-square)
 ![Human in the loop](https://img.shields.io/badge/human--in--the--loop-Telegram-26a5e4?style=flat-square)
 
-*Projekt portfolio · Portfolio project — by [Filip Mrozik](https://github.com/phillipmrozik) · MrozikDigital*
+*Projekt portfolio · Portfolio project — by [Phillip Mrozik](https://github.com/phillipmrozik) · MrozikDigital*
 
 </div>
 
@@ -198,9 +198,9 @@ n8n (Form Trigger, Data Tables, AI Agent, Structured Output Parser, Google Calen
 
 ## 📄 Licencja / License
 
-[MIT](LICENSE) © Filip Mrozik
+[MIT](LICENSE) © Phillip Mrozik
 
 ## 📬 Kontakt / Contact
 
-**Filip Mrozik · MrozikDigital** — automatyzacje i integracje / automations and integrations
-GitHub: [@phillipmrozik](https://github.com/phillipmrozik)
+**Phillip Mrozik · MrozikDigital** — automatyzacje i integracje / automations and integrations
+GitHub: [@mrozikdigital@gmail.com](https://github.com/phillipmrozik)
