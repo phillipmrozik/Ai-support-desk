@@ -1,0 +1,167 @@
+[
+  {
+    "module": "1 · Formularz / Form",
+    "description": "Odczyt pierwszej strony i rozdzielenie: nowy czy wracający pacjent. / Reads page one and splits new vs returning.",
+    "nodes": [
+      "Odczytaj odpowiedzi / Read answers",
+      "Czy wraca do wizyty? / Returning patient?"
+    ]
+  },
+  {
+    "module": "2 · Wracający pacjent / Returning patient",
+    "description": "Lista zgłoszeń po e-mailu i telefonie, wybór i wczytanie rozmowy. / Finds requests by e-mail and phone, loads the chat.",
+    "nodes": [
+      "Znajdź zgłoszenia pacjenta / Find patient requests",
+      "Przygotuj listę wyboru / Build request picker",
+      "Znaleziono zgłoszenia? / Requests found?",
+      "Wybierz zgłoszenie / Pick a request",
+      "Brak zgłoszeń / Nothing found",
+      "Dopasuj wybór do zgłoszenia / Match choice to ticket",
+      "Pobierz zgłoszenie / Load ticket",
+      "Pobierz historię rozmowy / Load chat history",
+      "Złóż kontekst wracającego / Assemble returning context"
+    ]
+  },
+  {
+    "module": "3 · Nowy pacjent / New patient",
+    "description": "Imię, wiadomość i krótki kod zgłoszenia. / Name, message and a short request code.",
+    "nodes": [
+      "Dane i wiadomość / Details and message",
+      "Pobierz istniejące kody / Load existing codes",
+      "Utwórz kod i kontekst / Create code and context"
+    ]
+  },
+  {
+    "module": "4 · Zapis zgłoszenia / Saving the request",
+    "description": "Zapis oryginalnej wiadomości i ustawienia kliniki. / Stores the original message and the clinic settings.",
+    "nodes": [
+      "Kontekst zgłoszenia / Request context",
+      "Nowe zgłoszenie? / New ticket?",
+      "Zapisz zgłoszenie / Save ticket",
+      "Zapisz wiadomość pacjenta / Save patient message",
+      "Ustawienia kliniki / Clinic settings"
+    ]
+  },
+  {
+    "module": "5 · Zrozumienie (AI) i baza wiedzy / Understanding (AI) and knowledge",
+    "description": "AI ustala sprawę, a system szuka faktów w bazie wiedzy. / AI works out the request, the system looks up facts.",
+    "nodes": [
+      "Wczytaj bazę wiedzy / Load knowledge base",
+      "Zbuduj zapytanie do AI / Build AI input",
+      "Zrozum wiadomość / Understand message",
+      "Model: analiza / Model: analysis",
+      "Format wyniku analizy / Analysis output format",
+      "Zastosuj analizę / Apply analysis",
+      "Wyszukaj w bazie wiedzy / Retrieve knowledge"
+    ]
+  },
+  {
+    "module": "6 · Kalendarz i rezerwacje / Calendar and booking",
+    "description": "Wolne terminy, dodanie, przeniesienie i odwołanie wizyty. / Free slots, adding, moving and cancelling visits.",
+    "nodes": [
+      "Sprawa kalendarza? / Calendar related?",
+      "Pobierz zajęte terminy / Get busy slots",
+      "Silnik rezerwacji / Booking engine",
+      "Akcja w kalendarzu / Calendar action",
+      "Dodaj wizytę do kalendarza / Add appointment",
+      "Usuń starą wizytę / Remove old appointment",
+      "To zmiana terminu? / Is it a reschedule?",
+      "Wynik rezerwacji / Booking result"
+    ]
+  },
+  {
+    "module": "7 · Odpowiedź (AI) / Reply (AI)",
+    "description": "Drugie AI pisze odpowiedź tylko z faktów kliniki. / A second AI writes the reply from clinic facts only.",
+    "nodes": [
+      "Zbuduj prompt odpowiedzi / Build reply prompt",
+      "Napisz odpowiedź / Write reply",
+      "Model: odpowiedź / Model: reply",
+      "Format odpowiedzi / Reply output format",
+      "Złóż wynik do kontroli / Assemble for QA"
+    ]
+  },
+  {
+    "module": "8 · Bramka jakości / Quality gate",
+    "description": "Python sprawdza odpowiedź. Wątpliwość = decyduje człowiek. / Python checks the reply. Doubt = a human decides.",
+    "nodes": [
+      "Bramka jakości (Python) / Quality gate (Python)",
+      "Wysłać automatycznie? / Send automatically?"
+    ]
+  },
+  {
+    "module": "9 · Odpowiedź automatyczna / Automatic reply",
+    "description": "E-mail do pacjenta, zapis odpowiedzi i aktualizacja zgłoszenia. / E-mail, saving the reply, updating the ticket.",
+    "nodes": [
+      "Wyślij e-mail do pacjenta / Email the patient",
+      "Zapisz odpowiedź asystenta / Save assistant reply",
+      "Zaktualizuj zgłoszenie (auto) / Update ticket (auto)"
+    ]
+  },
+  {
+    "module": "10 · Przekazanie człowiekowi / Hand-off to a human",
+    "description": "Szkic do akceptacji i uruchomienie zatwierdzania na Telegramie. / Draft saved and Telegram approval started.",
+    "nodes": [
+      "Zapisz szkic do akceptacji / Save draft for approval",
+      "Oznacz jako oczekujące / Mark as waiting",
+      "Przekaż do zatwierdzenia / Hand off to approval"
+    ]
+  },
+  {
+    "module": "11 · Ekran końcowy / Final screen",
+    "description": "Co pacjent widzi na końcu: odpowiedź lub informację o przekazaniu. / What the patient sees at the end.",
+    "nodes": [
+      "Przygotuj ekran końcowy / Build final screen",
+      "Ekran końcowy / Final screen"
+    ]
+  },
+  {
+    "module": "12 · Zatwierdzanie / Human approval",
+    "description": "Telegram: szkic odpowiedzi i decyzja człowieka. / Telegram: the draft reply and the human decision.",
+    "nodes": [
+      "Pobierz zgłoszenie do decyzji / Load ticket for decision",
+      "Czeka na decyzję? / Waiting for decision?",
+      "Pobierz rozmowę / Load conversation",
+      "Przygotuj wiadomość dla zespołu / Build staff message",
+      "Zapytaj na Telegramie / Ask on Telegram",
+      "Odczytaj decyzję / Read decision",
+      "Wysłać do pacjenta? / Send to patient?"
+    ]
+  },
+  {
+    "module": "13a · Po zatwierdzeniu / After approval",
+    "description": "Wysyłka do pacjenta i zamknięcie zgłoszenia. / Sends to the patient and closes the ticket.",
+    "nodes": [
+      "Przygotuj e-mail (po decyzji) / Build email (after decision)",
+      "Wyślij zatwierdzoną odpowiedź / Send approved reply",
+      "Zapisz odpowiedź zespołu / Save team reply",
+      "Zamknij zgłoszenie / Resolve ticket",
+      "Potwierdź na Telegramie / Confirm on Telegram"
+    ]
+  },
+  {
+    "module": "13b · Odrzucono lub wygasło / Rejected or expired",
+    "description": "Nic nie wysyłamy, informujemy zespół. / Nothing is sent, the team is informed.",
+    "nodes": [
+      "Oznacz szkic jako niewysłany / Mark draft as not sent",
+      "Zaktualizuj zgłoszenie (bez wysyłki) / Update ticket (not sent)",
+      "Powiadom o zamknięciu / Notify closure"
+    ]
+  },
+  {
+    "module": "14 · Pilnowanie czasu (SLA) / Response-time watchdog",
+    "description": "Przypomnienia, gdy sprawa za długo czeka na człowieka. / Reminders when a case waits too long.",
+    "nodes": [
+      "Pobierz oczekujące zgłoszenia / Load waiting tickets",
+      "Które czekają za długo? / Which are overdue?",
+      "Przypomnij na Telegramie / Remind on Telegram",
+      "Zapamiętaj przypomnienie / Remember reminder"
+    ]
+  },
+  {
+    "module": "15 · Alarmy o błędach / Error alerts",
+    "description": "Gdy coś się zepsuje, dostajesz wiadomość na Telegramie. / When something breaks, you get a Telegram message.",
+    "nodes": [
+      "Powiadom o błędzie / Send error alert"
+    ]
+  }
+]

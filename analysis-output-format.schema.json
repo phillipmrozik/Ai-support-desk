@@ -1,0 +1,1 @@
+{"language":"pl","intent":"price_inquiry","urgency":"normal","sentiment":"neutral","topics":["price_whitening","proc_whitening"],"service":"whitening","requested_datetime":"","requested_time_of_day":"","chosen_slot_index":0,"needs_human":false,"needs_human_reason":"","confidence":0.9,"summary_pl":"Pacjent pyta o cenę wybielania zębów.","reasoning":"Clear price question."}
